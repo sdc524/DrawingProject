@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class CreativityViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
