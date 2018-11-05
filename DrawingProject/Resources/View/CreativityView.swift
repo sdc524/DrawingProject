@@ -67,6 +67,8 @@ public class CreativityView : UIView
         logo.addLine(to: CGPoint(x: 100, y: 180))
         logo.move(to: CGPoint(x: 150, y: 190))
         logo.addLine(to: CGPoint(x: 100, y: 180))
+        logo.addLine(to: CGPoint(x: 100, y: 190))
+        logo.addLine(to: CGPoint(x: 130, y: 200))
         logo.close()
         logo.fill()
     }
