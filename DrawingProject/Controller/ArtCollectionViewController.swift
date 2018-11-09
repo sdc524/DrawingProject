@@ -57,7 +57,7 @@ public class ArtCollectionViewController: UICollectionViewController
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -87,11 +87,15 @@ public class ArtCollectionViewController: UICollectionViewController
     }
 
    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
+    let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+    
+    artCell.backgroundColor = .blue
+    artCell.artImage.image = creativeCS[indexPath.row]
+    artCell.artLabel.text = labels[indexPath.row]
         // Configure the cell
     
-        return cell
+        return artCell
     }
 
     // MARK: UICollectionViewDelegate
