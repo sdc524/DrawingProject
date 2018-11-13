@@ -54,7 +54,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="artIdentifier" id="oVa-z1-p1V">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="artIdentifier" id="oVa-z1-p1V" customClass="ArtCell" customModule="DrawingProject" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -77,10 +77,16 @@
                                     <constraint firstItem="Tky-aS-Rwv" firstAttribute="centerX" secondItem="kIM-OA-FuT" secondAttribute="centerX" id="Jsd-5S-Fvx"/>
                                     <constraint firstItem="Tky-aS-Rwv" firstAttribute="leading" secondItem="oVa-z1-p1V" secondAttribute="leading" id="O3f-Sp-aJB"/>
                                     <constraint firstItem="Tky-aS-Rwv" firstAttribute="centerY" secondItem="kIM-OA-FuT" secondAttribute="centerY" id="cSX-tB-CXq"/>
+                                    <constraint firstItem="Tky-aS-Rwv" firstAttribute="width" secondItem="oVa-z1-p1V" secondAttribute="width" id="enN-j1-6dH"/>
+                                    <constraint firstItem="kIM-OA-FuT" firstAttribute="top" secondItem="Tky-aS-Rwv" secondAttribute="bottom" constant="9" id="ih6-8I-Agf"/>
                                     <constraint firstAttribute="bottom" secondItem="Tky-aS-Rwv" secondAttribute="bottom" id="tXb-1F-T62"/>
                                     <constraint firstItem="Tky-aS-Rwv" firstAttribute="width" secondItem="oVa-z1-p1V" secondAttribute="width" id="x5l-Aw-nYF"/>
                                     <constraint firstItem="Tky-aS-Rwv" firstAttribute="top" secondItem="oVa-z1-p1V" secondAttribute="top" id="xXf-Tm-GZn"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="artImage" destination="Tky-aS-Rwv" id="i4k-wc-GoI"/>
+                                    <outlet property="artLabel" destination="kIM-OA-FuT" id="bm4-kJ-JMe"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

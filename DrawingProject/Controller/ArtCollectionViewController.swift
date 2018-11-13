@@ -32,7 +32,7 @@ public class ArtCollectionViewController: UICollectionViewController
         ]
     }()
     
-    private let lables : [String] =
+    private let labels : [String] =
    {
         return [
             "This",
@@ -63,7 +63,7 @@ public class ArtCollectionViewController: UICollectionViewController
     }
 
     /*
-    // MARK: - Navigation
+    // MARK: - Navigation / Layout
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,7 +86,8 @@ public class ArtCollectionViewController: UICollectionViewController
         return creativeCS.count
     }
 
-   public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+   {
     
     let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
     
@@ -111,8 +112,19 @@ public class ArtCollectionViewController: UICollectionViewController
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
-
+    public func collectionView(_collectionView: UICollectionView,
+                               layoutCollectionViewLayout: UICollectionViewLayout,
+                               insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
     
+    public func collectionView(_ collectionView: UICollectionView,
+              layout collectionViewLayout: UICollectionViewLayout,
+              minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
     
     
     /*
