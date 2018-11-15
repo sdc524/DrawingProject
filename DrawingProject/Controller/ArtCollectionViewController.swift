@@ -101,6 +101,27 @@ public class ArtCollectionViewController: UICollectionViewController
 
     // MARK: UICollectionViewDelegate
     
+    public override func collectionView(_collectionView: UICollectionView, didSelectItamAt indexPath: IndexPath)
+    {
+        let imageView = UIImageView((image: creativeCS[indexPath.row])
+        imageView.frame = self.view.frame
+        imageView.backgroundColor = .black
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(targe: self, action: #slector(dismissFullscreenImage))
+        imageView.addGestureRecognizer(tap)
+        self.view.addSubview(imageView)
+        
+        //Use to go back from full mode
+        @objc
+        private func dismissFullscreenImage(_ sender: UITapGestureRecognizer)
+        {
+            sender.view?.removeFromSuperview()
+        }
+        
+        
+    }
     
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
